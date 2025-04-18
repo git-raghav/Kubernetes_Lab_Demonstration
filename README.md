@@ -78,8 +78,7 @@ This file automatically scales your application based on CPU usage:
     ```bash
     minikube start
     ```
-
-![image](/assets/Screenshot%202025-04-18%20195620.png)
+    ![image](/assets/Screenshot%202025-04-18%20195620.png)
 
 3. **Enable Metrics Server**
 
