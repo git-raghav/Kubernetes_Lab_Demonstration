@@ -79,11 +79,15 @@ This file automatically scales your application based on CPU usage:
     minikube start
     ```
 
+![image](/assets/Screenshot%202025-04-18%20195620.png)
+
 3. **Enable Metrics Server**
 
     ```bash
     minikube addons enable metrics-server
     ```
+
+![image](/assets/Screenshot%202025-04-18%20205511.png)
 
 4. **Build and Push Docker Image**
 
@@ -92,12 +96,18 @@ This file automatically scales your application based on CPU usage:
     docker push raghavcodes/raghav-web-app:latest
     ```
 
+![image](/assets/Screenshot%202025-04-18%20200035.png)
+![image](/assets/Screenshot%202025-04-18%20200230.png)
+![image](/assets/Screenshot%202025-04-18%20200401.png)
+
 5. **Deploy to Kubernetes**
     ```bash
     kubectl apply -f deployment.yaml
     kubectl apply -f service.yaml
     kubectl apply -f hpa.yaml
     ```
+
+![image](/assets/Screenshot%202025-04-18%20200754.png)
 
 ## Testing and Monitoring
 
@@ -109,6 +119,9 @@ For proper testing and monitoring, you'll need to run multiple commands in separ
 minikube service raghav-web-app-service --url
 ```
 
+![image](/assets/Screenshot%202025-04-18%20201431.png)
+![image](/assets/Screenshot%202025-04-18%20201507.png)
+
 Keep this terminal open as it maintains the connection to your application.
 
 ### Terminal 2: Run Stress Test
@@ -117,11 +130,15 @@ Keep this terminal open as it maintains the connection to your application.
 hey -z 5m -c 50 http://127.0.0.1:51200
 ```
 
+![image](/assets/Screenshot%202025-04-18%20210516.png)
+
 ### Terminal 3: Monitor HPA
 
 ```bash
 kubectl get hpa -w
 ```
+
+![image](/assets/Screenshot%202025-04-18%20210851.png)
 
 What to observe:
 
@@ -134,6 +151,8 @@ What to observe:
 ```bash
 kubectl get pods -w
 ```
+
+![image](/assets/Screenshot%202025-04-18%20210929.png)
 
 What to observe:
 
@@ -182,6 +201,9 @@ kubectl delete -f service.yaml
 kubectl delete -f hpa.yaml
 minikube stop
 ```
+
+![image](/assets/Screenshot%202025-04-18%20211806.png)
+![image](/assets/Screenshot%202025-04-18%20211941.png)
 
 ## Troubleshooting
 
