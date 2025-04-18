@@ -85,8 +85,7 @@ This file automatically scales your application based on CPU usage:
     ```bash
     minikube addons enable metrics-server
     ```
-
-![image](/assets/Screenshot%202025-04-18%20205511.png)
+    ![image](/assets/Screenshot%202025-04-18%20205511.png)
 
 4. **Build and Push Docker Image**
 
@@ -94,10 +93,9 @@ This file automatically scales your application based on CPU usage:
     docker build -t raghavcodes/raghav-web-app:latest .
     docker push raghavcodes/raghav-web-app:latest
     ```
-
-![image](/assets/Screenshot%202025-04-18%20200035.png)
-![image](/assets/Screenshot%202025-04-18%20200230.png)
-![image](/assets/Screenshot%202025-04-18%20200401.png)
+    ![image](/assets/Screenshot%202025-04-18%20200035.png)
+    ![image](/assets/Screenshot%202025-04-18%20200230.png)
+    ![image](/assets/Screenshot%202025-04-18%20200401.png)
 
 5. **Deploy to Kubernetes**
     ```bash
@@ -105,8 +103,7 @@ This file automatically scales your application based on CPU usage:
     kubectl apply -f service.yaml
     kubectl apply -f hpa.yaml
     ```
-
-![image](/assets/Screenshot%202025-04-18%20200754.png)
+    ![image](/assets/Screenshot%202025-04-18%20200754.png)
 
 ## Testing and Monitoring
 
